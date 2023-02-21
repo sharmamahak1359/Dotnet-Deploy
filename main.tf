@@ -49,7 +49,7 @@ resource "azurerm_app_service_plan" "msappserviceplan" {
 }
 
 resource "azurerm_app_service" "msappservice" {
-  name                = "mssharmaasiac"
+  name                = "mahakssharmaasiac"
   location            = azurerm_resource_group.resourcegroup.location
   resource_group_name = azurerm_resource_group.resourcegroup.name
   app_service_plan_id = azurerm_app_service_plan.msappserviceplan.id
