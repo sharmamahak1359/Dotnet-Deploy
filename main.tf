@@ -23,7 +23,7 @@ terraform {
 
 
 resource "azurerm_resource_group" "resourcegroup" {
-  name     = "msrgiac"
+  name     = "blablargmahak"
   location = "uksouth"
 }
 
