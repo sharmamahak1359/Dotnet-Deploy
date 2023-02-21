@@ -13,9 +13,9 @@ provider "azurerm" {
 }
 terraform {
   backend "azurerm"{
-      resource_group_name = "tfrgblobstore"
-      storage_account_name = "tfstaccbackend"
-      container_name = "tfstate"
+      resource_group_name = "sharmargmahak"
+      storage_account_name = "backendstorageaccmahak"
+      container_name = "mstfstate"
       key = "terraform.tfstate"
 
      }
