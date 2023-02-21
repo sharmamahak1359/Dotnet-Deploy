@@ -13,9 +13,9 @@ provider "azurerm" {
 }
 terraform {
   backend "azurerm"{
-      resource_group_name = "sharmargmahak"
-      storage_account_name = "backendstorageaccmahak"
-      container_name = "mstfstate"
+      resource_group_name = "msrgiac"
+      storage_account_name = "mahakstorageaccsharma"
+      container_name = "mshtfstate"
       key = "terraform.tfstate"
 
      }
@@ -23,13 +23,13 @@ terraform {
 
 
 resource "azurerm_resource_group" "resourcegroup" {
-  name     = "blablargmahak"
+  name     = "msaspiac"
   location = "uksouth"
 }
 
 # Create an Azure Container Registry
 resource "azurerm_container_registry" "azurecontainerregistry" {
-  name                     = "msazurecg"
+  name                     = "mahaksazurecg"
   resource_group_name      = azurerm_resource_group.resourcegroup.name
   location                 = azurerm_resource_group.resourcegroup.location
   sku                      = "Standard"
