@@ -49,10 +49,10 @@ stages:
         inputs:
           provider: 'azurerm'
           command: 'init'
-          backendServiceArm: 'Azure service connection'
-          backendAzureRmResourceGroupName: 'tfrgblobstore'
-          backendAzureRmStorageAccountName: 'tfstaccbackend'
-          backendAzureRmContainerName: 'tfstate'
+          backendServiceArm: 'asc'
+          backendAzureRmResourceGroupName: 'sharmargmahak'
+          backendAzureRmStorageAccountName: 'backendstorageaccmahak'
+          backendAzureRmContainerName: 'mstfstate'
           backendAzureRmKey: 'terraform.tfstate'
       - task: TerraformTaskV3@3
         displayName: 'validate'
@@ -78,20 +78,20 @@ stages:
                  inputs:
                    provider: 'azurerm'
                    command: 'init'
-                   backendServiceArm: 'Azure service connection'
-                   backendAzureRmResourceGroupName: 'tfrgblobstore'
-                   backendAzureRmStorageAccountName: 'tfstaccbackend'
-                   backendAzureRmContainerName: 'tfstate'
+                   backendServiceArm: 'asc'
+                   backendAzureRmResourceGroupName: 'sharmargmahak'
+                   backendAzureRmStorageAccountName: 'backendstorageaccmahak'
+                   backendAzureRmContainerName: 'mstfstate'
                    backendAzureRmKey: 'terraform.tfstate'
                - task: TerraformTaskV3@3
                  displayName: 'plan'
                  inputs:
                    provider: 'azurerm'
                    command: 'plan'
-                   environmentServiceNameAzureRM: 'Azure service connection'
+                   environmentServiceNameAzureRM: 'asc'
                - task: TerraformTaskV3@3
                  displayName: 'apply'
                  inputs:
                    provider: 'azurerm'
                    command: 'apply'
-                   environmentServiceNameAzureRM: 'Azure service connection'          
+                   environmentServiceNameAzureRM: 'asc'          
