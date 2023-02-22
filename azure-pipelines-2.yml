@@ -38,27 +38,7 @@ stages:
         tags: |
           $(tag)
         
-- stage: validate
-  jobs:
-    - job: validate
-      continueOnError: false
-      steps: 
-    
-      - task: TerraformTaskV3@3
-        displayName: 'init'
-        inputs:
-          provider: 'azurerm'
-          command: 'init'
-          backendServiceArm: 'asc'
-          backendAzureRmResourceGroupName: 'sharmargmahak'
-          backendAzureRmStorageAccountName: 'backendstorageaccmahak'
-          backendAzureRmContainerName: 'mstfstate'
-          backendAzureRmKey: 'terraform.tfstate'
-      - task: TerraformTaskV3@3
-        displayName: 'validate'
-        inputs:
-          provider: 'azurerm'
-          command: 'validate'
+
 - stage: deploy
   jobs:
       - deployment: deploy_terraform 
