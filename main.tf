@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 terraform {
   backend "azurerm"{
-      resource_group_name = "msrgiac"
+      resource_group_name = "msaspiac"
       storage_account_name = "mahakstorageaccsharma"
       container_name = "mshtfstate"
       key = "terraform.tfstate"
