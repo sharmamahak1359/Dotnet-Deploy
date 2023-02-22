@@ -11,7 +11,7 @@ resources:
 variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: '8ad5bf34-eb2b-4577-acb1-4c203b12791f'
-  imageRepository: 'sharmamahakdotnetdeploy'
+  imageRepository: 'webapp'
   containerRegistry: 'mahaksazurecg.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
   tag: '$(Build.BuildId)'
